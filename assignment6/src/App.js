@@ -12,7 +12,7 @@ const menuItems = [
   { id: 3, label: 'Services' },
   { id: 4, label: 'Contact' }
 ];
-// aaa
+
 const imageUrls = [
   'https://via.placeholder.com/150',
   'https://via.placeholder.com/150',
