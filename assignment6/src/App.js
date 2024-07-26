@@ -1,39 +1,47 @@
-import React, { useState } from 'react';
-import './App.css';
-import TodoList from './components/ToDoList';
-import DynamicMenu from './components/DynamicMenu';
-import Gallery from './components/Gallery';
-import ContactList from './components/ContactList';
-import ShoppingCart from './components/ShoppingCart';
+import React, { useState } from "react";
+import "./App.css";
+import TodoList from "./components/ToDoList";
+import DynamicMenu from "./components/DynamicMenu";
+import Gallery from "./components/Gallery";
+import ContactList from "./components/ContactList";
+import ShoppingCart from "./components/ShoppingCart";
 
 const menuItems = [
-  { id: 1, label: 'Home' },
-  { id: 2, label: 'About' },
-  { id: 3, label: 'Services' },
-  { id: 4, label: 'Contact' }
+  { id: 1, label: "Home" },
+  { id: 2, label: "About" },
+  { id: 3, label: "Services" },
+  { id: 4, label: "Contact" },
 ];
 
 const imageUrls = [
-  'https://via.placeholder.com/150',
-  'https://via.placeholder.com/150',
-  'https://via.placeholder.com/150'
+  "https://c1.wallpaperflare.com/preview/810/984/881/sunset-square-profile-picture-photo-pretty.jpg",
+  "https://i.pinimg.com/originals/2a/14/db/2a14db4b9860dcedc6e015943c2b5099.jpg",
+  "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTVi-vLP25q_vjS2-x07hnSt1vgzYbqpRelog&s",
 ];
 
 const contacts = [
-  { name: 'John Doe', phone: '123-456-7890', email: 'john@example.com' },
-  { name: 'Jane Smith', phone: '987-654-3210', email: 'jane@example.com' }
+  {
+    name: "Shriya Sorte",
+    phone: "+91 8551929956",
+    email: "shriyasorte@gmail.com",
+  },
+  {
+    name: "Ajitesh Sorte",
+    phone: "+91 7276246463",
+    email: "sorteajitesh@gmail.com",
+  },
 ];
 
 function App() {
   const [todos, setTodos] = useState([]);
   const [cart, setCart] = useState([]);
-  const [newTodo, setNewTodo] = useState('');
-  const [cartItem, setCartItem] = useState('');
+  const [newTodo, setNewTodo] = useState("");
+  const [cartItem, setCartItem] = useState("");
 
   const addTodo = () => {
     if (newTodo.trim()) {
       setTodos([...todos, newTodo]);
-      setNewTodo('');
+      setNewTodo("");
     }
   };
 
@@ -45,7 +53,7 @@ function App() {
   const addToCart = () => {
     if (cartItem.trim()) {
       setCart([...cart, cartItem]);
-      setCartItem('');
+      setCartItem("");
     }
   };
 
@@ -56,8 +64,8 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Combined Features App</h1>
-      
+      <h1>Assignment 6</h1>
+
       <DynamicMenu items={menuItems} />
 
       <div className="section">
@@ -89,7 +97,7 @@ function App() {
           value={cartItem}
           onChange={(e) => setCartItem(e.target.value)}
           placeholder="Add a new item"
-        />
+        /><br/><br/>
         <button onClick={addToCart}>Add to Cart</button>
         <ShoppingCart items={cart} onRemove={removeFromCart} />
       </div>
