@@ -56,6 +56,15 @@ const Navbar = () => {
                 Blogs
               </NavLink>
             </li>
+
+            <li className="nav-item">
+              <NavLink
+                to="/products"
+                className={({ isActive }) => 'nav-link' + (isActive ? ' active' : '')}
+              >
+                Product Catalog
+              </NavLink>
+            </li>
           </ul>
           <button className="btn btn-outline-success" type="submit">
             Sign in

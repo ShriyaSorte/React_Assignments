@@ -5,6 +5,8 @@ import Blog from './components/Blog';
 import NotFound from "./components/NotFound";
 import Home from "./components/Home";
 import About from "./components/About";
+import ProductCatalog from "./components/ProductCatalog";
+import ProductDetail from "./components/ProductDetail";
 
 function App() {
   return (
@@ -15,6 +17,8 @@ function App() {
           <Route path="/home"  element={<Home/>}></Route>
           <Route path="/about" element={<About/>}></Route>
           <Route path="/blog/*" element={<Blog/>} />
+          <Route path="/products" element={<ProductCatalog/>} />
+          <Route path="/product/:id" element={<ProductDetail/>} />
           <Route path="*" element={<NotFound/>} />
         </Routes>
       
